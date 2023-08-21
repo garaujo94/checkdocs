@@ -34,4 +34,4 @@ pythonpath = "."
 [tool.taskipy.tasks]
 docs = "mkdocs serve"
 test = "pytest -s --cov=checkdocs -vv"
-post_test = "coverage html
+post_test = "coverage html"
