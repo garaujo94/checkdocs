@@ -1,0 +1,12 @@
+site_name: Chekcdocs
+repo_url: https://github.com/garaujo94/checkdocs
+repo_name: garaujo94/checkdocs
+
+theme:
+  name: material
+  palette:
+    primary: deep purple
+    scheme: slate
+
+markdown_extensions:
+  - attr_list
