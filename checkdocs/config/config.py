@@ -1,6 +1,8 @@
-functions_exclusion_list = ["__init__", "__main__"]
+from typing import Any, Dict, List
 
-docstrings_regex = [
+functions_exclusion_list: List[str] = ["__init__", "__main__"]
+
+docstrings_regex: List[Dict[str, Any]] = [
     {
         "regex": r"{param_name} \([^)]+\)",
         "sep": " ",

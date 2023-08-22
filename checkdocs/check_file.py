@@ -1,6 +1,6 @@
 import ast
 
-from checkdocs.config import functions_exclusion_list
+from checkdocs.config.config import functions_exclusion_list
 from checkdocs.make_check import checkdocs
 
 

@@ -1,10 +1,11 @@
 import ast
 import re
+from typing import Any, Dict
 
-from checkdocs.config import docstrings_regex
+from checkdocs.config.config import docstrings_regex
 
 
-def checkdocs(function: ast.FunctionDef) -> dict:
+def checkdocs(function: ast.FunctionDef) -> Dict:
     """
     Check if the docstrings of the function are the same as the parameters.
 
@@ -40,7 +41,7 @@ def checkdocs(function: ast.FunctionDef) -> dict:
         for parameter in parameters:
             for regex in docstrings_regex:
                 pattern = re.compile(regex["regex"].format(param_name=parameter))
-                result = pattern.findall(docstring)
+                result: list[Any] = pattern.findall(docstring)
 
                 if not result:
                     continue
@@ -69,7 +70,7 @@ def checkdocs(function: ast.FunctionDef) -> dict:
 
 def get_parameters(obj) -> dict:
     parameters = {}
-    arg_list = list(map(lambda x: ast.unparse(x), obj.args.args))
+    arg_list = list(map(ast.unparse, obj.args.args))
     for arg in arg_list:
         splited_arg = arg.split(":")
         if len(splited_arg) == 2:
