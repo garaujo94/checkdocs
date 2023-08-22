@@ -2,7 +2,7 @@ from rich import print
 from typer import Argument, Typer
 from typing_extensions import Annotated
 
-from checkdocs.check_file import check_file
+from checkdocs.checkers.check_file import check_file
 
 app = Typer()
 

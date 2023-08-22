@@ -1,7 +1,7 @@
 import ast
 
+from checkdocs.checkers.make_check import checkdocs
 from checkdocs.config.config import functions_exclusion_list
-from checkdocs.make_check import checkdocs
 
 
 def check_file(file: str) -> dict:
@@ -18,7 +18,7 @@ def check_file(file: str) -> dict:
 
 
 def parse_file(file: str) -> ast.Module:
-    with open(file, "r") as f:
+    with open(file, "r", encoding="utf-8") as f:
         tree = ast.parse(f.read())
     return tree
 
