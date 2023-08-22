@@ -1,5 +1,8 @@
+from rich import print
 from typer import Argument, Typer
 from typing_extensions import Annotated
+
+from checkdocs.check_file import check_file
 
 app = Typer()
 
@@ -8,7 +11,7 @@ app = Typer()
 def file(
     name: Annotated[str, Argument(help="Filename to check. Only [.py] files.")],
 ):
-    print(f"Mock Funtion to Check File {name}!")
+    print(check_file(name))
 
 
 @app.command()
