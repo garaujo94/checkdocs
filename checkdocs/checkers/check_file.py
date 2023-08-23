@@ -18,8 +18,6 @@ def check_file(file_path: Path) -> List[Dict]:
 
             result = checkdocs(function)
             results.append(result)
-    else:
-        result = [{}]
 
     return results
 
