@@ -1,5 +1,5 @@
 # checkdocs
-Just check if the type hint macthes with the docstring.
+Just check if the type hint matches with the docstring.
 
 ## Install
 ```

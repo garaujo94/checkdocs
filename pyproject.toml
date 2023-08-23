@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "checkdocs"
-version = "0.1.0"
+version = "0.1.1"
 description = "Check if the type hint makes sense with the docstring"
 authors = ["Gustavo Araujo <gala.gustavoantonio@gmail.com>"]
 license = "MIT"
