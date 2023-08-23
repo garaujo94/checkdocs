@@ -5,6 +5,7 @@ from typing_extensions import Annotated
 from checkdocs.checkers.check_file import check_file
 from checkdocs.checkers.check_folder import check_folder
 from checkdocs.config.config import base_path
+from checkdocs.printers import output_formatter, printer
 
 app = Typer()
 
@@ -14,7 +15,9 @@ def file(
     name: Annotated[str, Argument(help="Filename to check. Only [.py] files.")],
 ):
     file_path = base_path / name
-    print(check_file(file_path))
+    result = check_file(file_path)
+    result = [{"name": name, "result": result}]
+    printer(result)
 
 
 @app.command()
@@ -24,4 +27,5 @@ def folder(
     ],
 ):
     path = base_path / name
-    print(check_folder(path))
+    result = check_folder(path)
+    printer(result)
