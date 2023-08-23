@@ -5,6 +5,16 @@ description = "Check if the type hint makes sense with the docstring"
 authors = ["Gustavo Araujo <gala.gustavoantonio@gmail.com>"]
 license = "MIT"
 readme = "README.md"
+classifiers = [
+    "Environment :: Console",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3.10"
+]
+
+[tool.poetry.urls]
+"Homepage" = "https://github.com/garaujo94/checkdocs"
+"Bug Tracker" = "https://github.com/garaujo94/checkdocs/issues"
 
 [tool.poetry.dependencies]
 python = "^3.10"
