@@ -1,6 +1,7 @@
 # Checkdocs
 
 This package just check if the Type Hint in the function definition matches with the Docstring.
+There is only 2 simple commands: `checkdocs file [filename]` and `checkdocs folder [foldername]`.
 
 ## Commands
 
@@ -12,6 +13,7 @@ This package just check if the Type Hint in the function definition matches with
 
     checkdocs/
         main.py           # Project execution.
+        ...
     tests/        
         test_.py          # Code tests. Typer App definition.
     pyproject.toml        # The project configuration.
