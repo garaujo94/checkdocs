@@ -1,3 +1,4 @@
+from pathlib import Path
 from typing import Any, Dict, List
 
 functions_exclusion_list: List[str] = ["__init__", "__main__"]
@@ -14,3 +15,5 @@ docstrings_regex: List[Dict[str, Any]] = [
         "string_limits": [None, None],
     },  # var_a : int ...
 ]
+
+base_path = Path.cwd()

@@ -64,7 +64,6 @@ def checkdocs(function: ast.FunctionDef) -> Dict:
                         f"[bold red]Variable: {name}[/bold red] | [bold purple]Docstring: {docstring_type_hint} -> Function definition: {correct_type_hint}[/bold purple]"
                     )
                     output["error"] += 1
-
     return output
 
 
